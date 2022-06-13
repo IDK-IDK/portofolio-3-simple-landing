@@ -187,7 +187,7 @@ button:hover {
 }
 .size {
   display: grid;
-  grid-template-columns: 21.09375% 57.8125% 21.09375%;
+  grid-template-columns: 21.09375% 1110px 21.09375%;
 }
 
 .grid-12 {
@@ -198,12 +198,11 @@ button:hover {
 
 .main-button {
   width: 255px;
-  height: 50px;
-  margin: 20px 0 0 0;
+  min-height: 50px;
   padding: 14px 87px;
   background-color: #0c0c0c;
 }
-.main-button span {
+.main-button > span {
   width: 81px;
   height: 22px;
   font-family: OpenSans;
@@ -235,6 +234,15 @@ button:hover {
   background-color: #0c0c0c;
   top: 701px;
   position: relative;
+  z-index: 1;
+}
+.wrapper .footer-color {
+  grid-column: 1/5;
+  background-color: #0c0c0c;
+  position: relative;
+  top: 1513px;
+  height: 230px;
+  min-width: 1920px;
 }
 .wrapper .central-wrapper {
   position: absolute;
@@ -299,7 +307,7 @@ button:hover {
   margin: -1px 0 0 0;
   grid-column: 1/6;
   height: 500px;
-  padding: 80px 62px 0 0;
+  padding: 80px 0 0 0;
   background-color: #ff7347;
 }
 .wrapper .central-wrapper main .section-1 .orange-block .main-block-description {
@@ -315,7 +323,7 @@ button:hover {
 .wrapper .central-wrapper main .section-1 .orange-block .main-text {
   width: 350px;
   height: 174px;
-  margin: 0 33px 20px 0;
+  margin: 0 0 40px 0;
   font-family: OpenSans;
   font-size: 14px;
   letter-spacing: 1.4px;
@@ -357,7 +365,7 @@ button:hover {
 .wrapper .central-wrapper main .section-2 .text-block-2 .txt-bl-2-text {
   width: 350px;
   height: 174px;
-  margin: 0 0 20px 0;
+  margin: 0 0 40px 0;
   font-family: OpenSans;
   font-size: 14px;
   letter-spacing: 1.4px;
@@ -425,4 +433,36 @@ button:hover {
   letter-spacing: 1.4px;
   text-align: left;
   color: #fff;
+}
+.wrapper .central-wrapper footer {
+  display: contents;
+  padding: 101px 881px;
+  background-color: #0c0c0c;
+}
+.wrapper .central-wrapper footer .social {
+  grid-column: 6/8;
+  margin: 100px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 230px;
+}
+.wrapper .central-wrapper footer .social > a {
+  width: 28px;
+  height: 28px;
+}
+.wrapper .central-wrapper footer .social .twitter {
+  background: url("../../img/footer-tw.svg") no-repeat center;
+}
+.wrapper .central-wrapper footer .social .fb {
+  background: url("../../img/footer-fb.svg") no-repeat center;
+}
+.wrapper .central-wrapper footer .social .vk {
+  background: url("../../img/footer-vk.svg") no-repeat center;
 }
