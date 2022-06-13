@@ -198,34 +198,48 @@ button:hover {
 
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
-.wrapper header .header {
-  grid-column: 2;
-  margin-top: 42px;
+.wrapper {
+  position: relative;
+}
+.wrapper .header-color {
+  grid-column: 1/4;
   min-height: 35px;
+}
+.wrapper .central-wrapper {
+  position: absolute;
+  top: 0;
+  grid-column: 2;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
 }
-.wrapper header .header .logo {
-  grid-column: 1;
+.wrapper .central-wrapper header {
+  grid-column: 1/13;
+  display: contents;
+  min-height: 35px;
+  background: red;
+}
+.wrapper .central-wrapper header .logo {
   justify-self: start;
   font-family: AbrilFatface;
   font-size: 26px;
   letter-spacing: 2.6px;
   text-align: left;
   color: #0c0c0c;
+  margin: 42px 0 18px 0;
 }
-.wrapper header .header .nav {
-  grid-column: 10/13;
-  justify-self: end;
+.wrapper .central-wrapper header .nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  grid-column: 10/13;
+  justify-self: end;
+  margin: 50px 0 26px 0;
 }
-.wrapper header .header .nav > li {
+.wrapper .central-wrapper header .nav > a {
   min-width: 61px;
   height: 19px;
   font-family: OpenSans;
@@ -234,7 +248,7 @@ button:hover {
   text-align: left;
   color: #0c0c0c;
 }
-.wrapper header .header .nav .active {
+.wrapper .central-wrapper header .nav .active {
   width: 56px;
   height: 19px;
   -webkit-box-flex: 0;
