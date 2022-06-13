@@ -18,11 +18,25 @@
   .header-color
     grid-column: 1/4
     min-height: 35px
+  .left-block
+    grid-column: 1
+    height: 500px
+    margin: 60px 0 0 0
+    background-color: $pinkish-orange
+    width: 101%
+
+  .right-black-div
+    grid-column: 2/5
+    height: 130px
+    background-color: $black
+    top: 701px
+    position: relative
+    //z-index: 2
+
   .central-wrapper
     position: absolute
     top: 0
     grid-column: 2
-    align-items: center
     header
       grid-column: 1/13
       display: contents
@@ -49,39 +63,111 @@
           flex-grow: 0
           margin: 0 42.5px
           @include Text-Style-3()
+    main
+      display: contents
+      .section-1
+        display: contents
+        .orange-block
+          margin: -1px 0 0 0
+          grid-column: 1/6
+          height: 500px
+          padding: 80px 62px 0 0
+          background-color: $pinkish-orange
+          .main-block-description
+            width: 383px
+            height: 73px
+            margin: 0 0 10px
+            @include Text-Style-4()
+          .main-text
+            width: 350px
+            height: 174px
+            margin: 0 33px 20px 0
+            @include Text-Style-5()
+          //a
+          //  width: 255px
+          //  height: 50px
+          //  flex-grow: 0
+          //  margin: 20px 128px 0 0
+          //  padding: 14px 87px
+          //  background-color: $black
+          //  span
+          //    width: 81px
+          //    height: 22px
+          //    @include Text-Style-6()
+        .main-photo
+          grid-column: 7/13
+          width: 540px
+          height: 810px
+          background: url("../../img/main-backg-photo.png")
+          background-size: 100% 100%
+          justify-self: end
+      .section-2
+        display: contents
+        .color-block-2
+          grid-column: 1/7
+          width: 540px
+          height: 460px
+          background-color: $pinkish-orange
+          margin: 0 0 80px 0
+        .text-block-2
+          grid-column: 8/12
+          margin: 100px 0 0 0
+          .txt-bl-2-description
+            width: 257px
+            height: 73px
+            margin: 20px 0 20px 0
+            @include Text-Style-4()
+          .txt-bl-2-text
+            width: 350px
+            height: 174px
+            margin: 0 0 20px 0
+            @include Text-Style-5()
+      .section-3
+        display: contents
+        .sect-3-description
+          grid-column: 1/4
+          width: 247px
+          height: 73px
+          margin: 0 0 10px 0
+          @include Text-Style-4()
+        .sect-3-text
+          grid-column: 1/13
+          width: 1109.4px
+          height: 60px
+          margin: 0 0.6px 20px 0
+          @include Text-Style-5()
+        .row-containers
+          grid-column: 1/13
+          display: grid
+          grid-template-columns: repeat(auto-fit,minmax(350px,1fr))
+          grid-column-gap: 30px
+          min-width: 100%
+          .container
+            min-width: 350px
+            min-height: 400px
+            .cont-main-block
+              min-width: 350px
+              min-height: 300px
+              background-image: linear-gradient(138deg, $pinkish-orange 31%, $sun-yellow 99%)
+            .cont-bottom-block
+              min-width: 350px
+              min-height: 100px
+              background-color: $black
+              text-align: center
+              justify-content: center
+              span
+                line-height: 100px
+                width: 47px
+                height: 19px
+                @include Text-Style-7()
 
-  //main
-  //  .section-1
-  //    .left-block
-  //      grid-column: 1
-  //      margin: 137px 0 0 0
-  //      height: 500px
-  //      background-color: $pinkish-orange
-  //
-  //    .central-side
-  //      grid-column: 2/3
-  //      //max-width: 1100px
-  //      position: relative
-  //      .orange-block
-  //        margin: 137px 0 0 0
-  //        grid-column: 1/7
-  //        height: 500px
-  //        padding: 80px 62px 93px 405px
-  //        background-color: $pinkish-orange
-  //      .main-photo
-  //        grid-column: 7/13
-  //        width: 540px
-  //        height: 810px
-  //        background: url("../../img/main-backg-photo.png") no-repeat center
-  //        background-size: cover
-  //      .black-div
-  //        grid-column: 1/13
-  //        height: 130px
-  //        background-color: $black
-  //        position: absolute
-  //        bottom: 74px
-  //        z-index: 1
-  //
+
+
+
+
+
+
+//
 
 
 

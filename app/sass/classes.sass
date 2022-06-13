@@ -2,11 +2,22 @@
 
 .size
   display: grid
-  grid-template-columns: 21.09375%  57.8125%  21.09375%
+  grid-template-columns: 21.09375%  57.8125%   21.09375%
   //grid-template-columns: 504px 57.8125%  504px
 
 
 .grid-12
   display: grid
-  grid-template-columns: repeat(12,1fr)
+  grid-template-columns: repeat(12,65px)
   grid-column-gap: 30px
+
+.main-button
+  width: 255px
+  height: 50px
+  margin: 20px 0 0 0
+  padding: 14px 87px
+  background-color: $black
+  span
+    width: 81px
+    height: 22px
+    @include Text-Style-6()
