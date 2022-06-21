@@ -1,52 +1,197 @@
 
 /*==========  Desktop First  ==========*/
-//@media (max-width: 1800px)
+@media (max-width: 1800px)
 
 
 /* Large Devices, Wide Screens */
-//@media  (max-width : 1200px)
+@media  (max-width : 1200px)
+
+@media  (max-width : 1150px)
+  html
+    body
+      .global-wrapper
+        grid-template-columns: 50px auto 50px !important
+        .left-block-color
+          opacity: 90%
+        .wrapper
+          grid-template-columns: repeat(auto-fit,minmax(0px,1fr)) !important
+          .section-1
+            .orange-block
+              grid-column: 1/13
+              grid-row: 2/3
+              z-index: 1
+              opacity: 90%
+            .main-photo
+              grid-column: 1/13
+              grid-row: 2/3
+              z-index: 0
+          .section-2
+            .color-block-2
+              grid-column: 1/13
+              grid-row: 3/4
+              opacity: 90%
+              z-index: 0
+              width: 100%
+            .text-block-2
+              grid-column: 1/13
+              grid-row: 3/4
+              z-index: 1
+              justify-self: end
+
+/* Medium Devices, Desktops */
+@media (max-width : 992px)
+
+@media  (max-width : 800px)
+  html
+    body
+      .global-wrapper
+        .wrapper
+          grid-column-gap: 0
+
+/* Small Devices, Tablets */
+@media (max-width : 642px)
+  html
+    body
+      .global-wrapper
+        .wrapper
+          main
+            .section-1
+              .orange-block
+                width: 100% !important
+                .main-text
+                  max-width: 100% !important
+              .main-photo
+                width: 100% !important
+            .section-2
+              .text-block-2
+                max-width: 100% !important
+                .txt-bl-2-description
+                  max-width: 100% !important
+                .txt-bl-2-text
+                  max-width: 100% !important
 
 
-  //grid-template-columns: repeat(auto-fit, minmax(320px, 1fr))
-//
-//
-///* Medium Devices, Desktops */
-//@media only screen and (max-width : 992px)
-//
-//
-///* Small Devices, Tablets */
-//@media only screen and (max-width : 768px)
-//
-///* Extra Small Devices, Phones */
-//@media only screen and (max-width : 480px)
-//
-///* Custom, iPhone Retina */
-//@media only screen and (max-width : 320px)
-///**/
-//
-///*==========  Mobile First  ==========*/
-//
-///* Custom, iPhone Retina */
-//@media only screen and (min-width : 320px)
-///**/
-//
-//
-///* Extra Small Devices, Phones */
-//@media only screen and (min-width : 480px)
-///**/
-//
-//
-///* Small Devices, Tablets */
-//@media only screen and (min-width : 768px)
-///**/
-//
-//
-///* Medium Devices, Desktops */
-//@media only screen and (min-width : 992px)
-///**/
-//
-//
-///* Large Devices, Wide Screens */
-//@media only screen and (min-width : 1200px)
-///**/
-//
+/* Extra Small Devices, Phones */
+@media (max-width : 500px)
+  html
+    body
+      .global-wrapper
+        grid-template-columns: 5px auto 5px !important
+        .wrapper
+          header
+            .logo
+              grid-column: 1/13 !important
+              padding: 15px 0 0 0 !important
+              grid-row: 1
+            nav
+              grid-column: 1/13 !important
+              grid-row: 1
+              padding: 60px 0 16px 0!important
+          main
+            .section-3
+              .row-containers
+                .container
+                  max-width: 100% !important
+                  min-height: 100% !important
+
+@media (max-width: 400px)
+  html
+    body
+      .global-wrapper
+        .wrapper
+          main
+            .section-1
+              .orange-block
+                .main-block-description
+                  font-size: 35px !important
+                  min-height: 73px !important
+            .section-2
+              .text-block-2
+                .txt-bl-2-description
+                  font-size: 35px !important
+            .section-3
+              .sect-3-description
+                font-size: 35px
+@media (max-width : 350px)
+  html
+    body
+      .global-wrapper
+        .wrapper
+          main
+            .section-1
+              .orange-block
+                align-items: center !important
+            .section-2
+              .text-block-2
+                align-items: center !important
+
+@media (max-width: 285px)
+  html
+    body
+      .global-wrapper
+        .wrapper
+          main
+            .section-1
+              .orange-block
+                .main-block-description
+                  font-size: 32px !important
+            .section-2
+              .text-block-2
+                .txt-bl-2-description
+                  font-size: 32px!important
+            .section-3
+              .sect-3-description
+                font-size: 32px!important
+/* Custom, iPhone Retina */
+@media (max-width : 320px)
+/**/
+
+@media (max-width: 450px)
+  html
+    body
+      .global-wrapper
+        grid-template-columns: 5px auto 5px !important
+        main
+          .section-3
+            .row-containers
+              grid-template-columns: auto !important
+              .container
+                width: 100% !important
+                .cont-main-block
+                  width: 100% !important
+                .cont-bottom-block
+                  width: 100% !important
+/* Smallest */
+@media (min-width : 280px)
+/**/
+
+/*==========  Mobile First  ==========*/
+
+/* Smallest */
+@media (min-width : 280px)
+/**/
+
+/* Custom, iPhone Retina */
+@media (min-width : 320px)
+/**/
+
+
+/* Extra Small Devices, Phones */
+@media (min-width : 480px)
+/**/
+
+
+/* Small Devices, Tablets */
+@media (min-width : 768px)
+/**/
+
+
+/* Medium Devices, Desktops */
+@media (min-width : 992px)
+/**/
+
+
+/* Large Devices, Wide Screens */
+@media (min-width : 1200px)
+/**/
+
