@@ -17,14 +17,22 @@
           grid-template-columns: repeat(auto-fit,minmax(0px,1fr)) !important
           .section-1
             .orange-block
+              opacity: 90%
+              z-index: 1
+              grid-column: 1/13 !important
+              right: 0 !important
+              left: auto
+              width: 130%
+
+            .text-block-1
               grid-column: 1/13
               grid-row: 2/3
               z-index: 1
-              opacity: 90%
+              justify-self: start
             .main-photo
               grid-column: 1/13
               grid-row: 2/3
-              z-index: 0
+
           .section-2
             .color-block-2
               grid-column: 1/13
@@ -56,8 +64,7 @@
         .wrapper
           main
             .section-1
-              .orange-block
-                width: 100% !important
+              .text-block-1
                 .main-text
                   max-width: 100% !important
               .main-photo
@@ -101,7 +108,7 @@
         .wrapper
           main
             .section-1
-              .orange-block
+              .text-block-1
                 .main-block-description
                   font-size: 35px !important
                   min-height: 73px !important
@@ -119,7 +126,7 @@
         .wrapper
           main
             .section-1
-              .orange-block
+              .text-block-1
                 align-items: center !important
             .section-2
               .text-block-2
@@ -132,7 +139,7 @@
         .wrapper
           main
             .section-1
-              .orange-block
+              .text-block-1
                 .main-block-description
                   font-size: 32px !important
             .section-2

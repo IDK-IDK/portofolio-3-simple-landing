@@ -91,7 +91,7 @@
   grid-column-gap: 30px;
 }
 
-.global-wrapper .wrapper main .section-2 .text-block-2 .main-button, .global-wrapper .wrapper main .section-1 .orange-block .main-button {
+.global-wrapper .wrapper main .section-2 .text-block-2 .main-button, .global-wrapper .wrapper main .section-1 .text-block-1 .main-button {
   width: 255px;
   min-height: 50px;
   background-color: #0c0c0c;
@@ -105,7 +105,7 @@
   -ms-flex-align: center;
   align-items: center;
 }
-.global-wrapper .wrapper main .section-2 .text-block-2 .main-button > span, .global-wrapper .wrapper main .section-1 .orange-block .main-button > span {
+.global-wrapper .wrapper main .section-2 .text-block-2 .main-button > span, .global-wrapper .wrapper main .section-1 .text-block-1 .main-button > span {
   font-family: OpenSans;
   font-size: 16px;
   font-weight: bold;
@@ -172,15 +172,22 @@ button:hover {
     grid-template-columns: repeat(auto-fit, minmax(0px, 1fr)) !important;
   }
   html body .global-wrapper .wrapper .section-1 .orange-block {
+    opacity: 90%;
+    z-index: 1;
+    grid-column: 1/13 !important;
+    right: 0 !important;
+    left: auto;
+    width: 130%;
+  }
+  html body .global-wrapper .wrapper .section-1 .text-block-1 {
     grid-column: 1/13;
     grid-row: 2/3;
     z-index: 1;
-    opacity: 90%;
+    justify-self: start;
   }
   html body .global-wrapper .wrapper .section-1 .main-photo {
     grid-column: 1/13;
     grid-row: 2/3;
-    z-index: 0;
   }
   html body .global-wrapper .wrapper .section-2 .color-block-2 {
     grid-column: 1/13;
@@ -204,10 +211,7 @@ button:hover {
 }
 /* Small Devices, Tablets */
 @media (max-width: 642px) {
-  html body .global-wrapper .wrapper main .section-1 .orange-block {
-    width: 100% !important;
-  }
-  html body .global-wrapper .wrapper main .section-1 .orange-block .main-text {
+  html body .global-wrapper .wrapper main .section-1 .text-block-1 .main-text {
     max-width: 100% !important;
   }
   html body .global-wrapper .wrapper main .section-1 .main-photo {
@@ -244,7 +248,7 @@ button:hover {
   }
 }
 @media (max-width: 400px) {
-  html body .global-wrapper .wrapper main .section-1 .orange-block .main-block-description {
+  html body .global-wrapper .wrapper main .section-1 .text-block-1 .main-block-description {
     font-size: 35px !important;
     min-height: 73px !important;
   }
@@ -256,7 +260,7 @@ button:hover {
   }
 }
 @media (max-width: 350px) {
-  html body .global-wrapper .wrapper main .section-1 .orange-block {
+  html body .global-wrapper .wrapper main .section-1 .text-block-1 {
     -webkit-box-align: center !important;
     -ms-flex-align: center !important;
     align-items: center !important;
@@ -268,7 +272,7 @@ button:hover {
   }
 }
 @media (max-width: 285px) {
-  html body .global-wrapper .wrapper main .section-1 .orange-block .main-block-description {
+  html body .global-wrapper .wrapper main .section-1 .text-block-1 .main-block-description {
     font-size: 32px !important;
   }
   html body .global-wrapper .wrapper main .section-2 .text-block-2 .txt-bl-2-description {
@@ -320,14 +324,6 @@ button:hover {
 .global-wrapper {
   position: relative;
 }
-.global-wrapper .left-block-color {
-  grid-column: 1/2;
-  height: 500px;
-  background-color: #ff7347;
-  position: absolute;
-  width: 101%;
-  top: 155px;
-}
 .global-wrapper .right-black-div {
   grid-column: 2/4;
   height: 130px;
@@ -348,6 +344,7 @@ button:hover {
 }
 .global-wrapper .wrapper {
   grid-column: 2/3;
+  position: relative;
 }
 .global-wrapper .wrapper header {
   display: contents;
@@ -403,6 +400,9 @@ button:hover {
   display: contents;
 }
 .global-wrapper .wrapper main .section-1 .orange-block {
+  position: absolute;
+  left: -405px;
+  top: 155px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -410,13 +410,24 @@ button:hover {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin: 60px 0 0 0;
   grid-column: 1/6;
+  width: 850px;
   height: 500px;
-  padding: 80px 0 0 0;
   background-color: #ff7347;
+  z-index: -1;
 }
-.global-wrapper .wrapper main .section-1 .orange-block .main-block-description {
+.global-wrapper .wrapper main .section-1 .text-block-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  grid-column: 1/6;
+  margin: 140px 0 0 0;
+}
+.global-wrapper .wrapper main .section-1 .text-block-1 .main-block-description {
   max-width: 100%;
   min-height: 73px;
   margin: 0 0 10px;
@@ -426,7 +437,7 @@ button:hover {
   text-align: left;
   color: #0c0c0c;
 }
-.global-wrapper .wrapper main .section-1 .orange-block .main-text {
+.global-wrapper .wrapper main .section-1 .text-block-1 .main-text {
   max-width: 350px;
   min-height: 174px;
   margin: 0 0 40px 0;
@@ -438,11 +449,11 @@ button:hover {
 }
 .global-wrapper .wrapper main .section-1 .main-photo {
   grid-column: 7/13;
-  width: 540px;
-  height: 810px;
+  max-width: 540px;
+  min-height: 810px;
+  -o-object-fit: cover;
+  object-fit: cover;
   margin: 0 0 80px 0;
-  background: url("../../img/main-backg-photo.png") center center;
-  background-size: cover;
   justify-self: end;
 }
 .global-wrapper .wrapper main .section-2 {
@@ -514,7 +525,7 @@ button:hover {
   grid-column: 1/13;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  grid-column-gap: 30px;
+  grid-gap: 30px;
   justify-items: center;
 }
 .global-wrapper .wrapper main .section-3 .row-containers .container {
